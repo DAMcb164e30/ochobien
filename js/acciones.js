@@ -3,7 +3,7 @@ $(document).ready(function(e){
   //watchID seb refiere a la aceleracion 'actual'
 
    var watchID= null;
-   document.addEventListener("deviceready", Dispositivio_Listo, false);
+   document.addEventListener("deviceready", Dispositivo_Listo, false);
 
    // Cuando esta listo el dispositivo
    function Dispositivo_Listo() {
