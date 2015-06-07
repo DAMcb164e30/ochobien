@@ -25,13 +25,13 @@ $(document).ready(function(e){
    function Detente() {
     if(watchID) {
        navigator.accelerometer.clearWatch(watchID);
-       watchID= null;
+       watchID = null;
      }
   }
 
   // Correcto:Toma una captura de la aceleracion
     function Correcto(acceleration) {
-   var element= document.getElementById('acelerometro');
+   var element = document.getElementById('acelerometro');
    
    element.innerHTML= 'Aceleracion en X: ' + acceleration.x + '<br />' +
                       'Aceleracion en Y: ' + acceleration.y + '<br />' +
