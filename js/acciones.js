@@ -2,7 +2,7 @@
 $ (document).ready(function(e){
   //watchID seb refiere a la aceleracion 'actual'
 
-   var watchID=null;
+   var watchID= null;
    document.addEventListener("deviceready", Dispositivio_Listo, false);
 
    // Cuando esta listo el dispositivo
@@ -17,7 +17,7 @@ $ (document).ready(function(e){
    //
     var opciones={ frequency: 2000 };
 
-    watchID=navigator.acelerometer.watchAcceleratio(Correcto, Error, opciones);
+    watchID=navigator.acelerometer.watchAcceleration(Correcto, Error, opciones);
     navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
   }
   // Detiene la 'observacion' de la aceleracion
@@ -31,12 +31,11 @@ $ (document).ready(function(e){
 
   // Correcto:Toma una captura de la aceleracion
     function Correcto(acceleration) {
-   
    var element= document.getElementById('acelerometro');
    
-   element.innerHTML= 'Aceleracion en X: ' + accelaration.x + '<br />' +
-                      'Aceleracion en Y: ' + accelaration.y + '<br />' +
-					  'Aceleracion en Z: ' + accelaration.z + '<br />' +
+   element.innerHTML= 'Aceleracion en X: ' + acceleration.x + '<br />' +
+                      'Aceleracion en Y: ' + acceleration.y + '<br />' +
+					  'Aceleracion en Z: ' + acceleration.z + '<br />' +
 					  'Intervalo: '        + acceleration.timestamp + '<br />';
 	}
 	
