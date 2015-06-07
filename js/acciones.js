@@ -1,5 +1,5 @@
 // JavaScript Document
-$ (document).ready(function(e){
+$(document).ready(function(e){
   //watchID seb refiere a la aceleracion 'actual'
 
    var watchID= null;
@@ -11,13 +11,13 @@ $ (document).ready(function(e){
    }
  
     // Empieza la 'observacion' de la aceleracion
-    function Comienza () {
+    function Comienza() {
 
     // Actualiza la aceleracion cada 2 segundos
    //
-    var opciones={ frequency: 2000 };
+    var opciones= { frequency: 2000 };
 
-    watchID=navigator.acelerometer.watchAcceleration(Correcto, Error, opciones);
+    watchID= navigator.accelerometer.watchAcceleration(Correcto, Error, opciones);
     navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
   }
   // Detiene la 'observacion' de la aceleracion
